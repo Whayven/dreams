@@ -1,32 +1,44 @@
-import React, { Fragment } from 'react';
+import React, { Component } from 'react';
 import Post from './Post';
+import axios from 'axios';
 
 import './Posts.css';
 
-const Posts = (props) => {
-    const { allPosts, handleDetails } = props;
+export default class Posts extends Component {
+    constructor(props) {
+        super(props);
 
-    return (
-        <div>
-            <div className="post-container">
-                {allPosts.map((post, index) => {
-                    return (
-                        (post.title && post.body) ?
-                            <Post className="post"
-                                title={post.title}
-                                body={post.body.substring(0, 199) + '...'}
-                                date={post.date}
-                                id={post.id}
-                                key={index}
-                                handleDetails={handleDetails}
-                            /> :
-                            <Fragment key={index}></Fragment>
-                    )
-                })}
+        this.state = { posts: [] };
+    }
+
+    componentDidMount() {
+        axios.get('http://localhost:5000/posts')
+            .then(res => {
+                this.setState({ posts: res.data });
+            })
+    }
+
+    render() {
+        const { posts } = this.state;
+        return (
+            <div>
+                <div className="post-container">
+                    {posts.map((post, index) => {
+                        const dateString = new Date(post.createdAt).toLocaleDateString();
+                        return (
+                            (post.title && post.body) ?
+                                <Post className="post"
+                                    title={post.title}
+                                    body={post.body.substring(0, 199) + '...'}
+                                    date={dateString}
+                                    id={post._id}
+                                    key={index}
+                                /> :
+                                <Fragment key={index}></Fragment>
+                        )
+                    })}
+                </div>
             </div>
-        </div>
-
-    )
+        )
+    }
 }
-
-export default Posts;

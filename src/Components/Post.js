@@ -4,12 +4,6 @@ import { Card, Button } from 'react-bootstrap';
 
 const Post = (props) => {
     const { title, body, date, id } = props;
-    const post = {
-        title,
-        body,
-        date,
-        id
-    };
 
     return (
         <Fragment>
@@ -20,7 +14,9 @@ const Post = (props) => {
                     <Card.Text>
                         {body}
                     </Card.Text>
-                    <Button as={Link} to={`/details/${id}`} variant="primary" onClick={props.handleDetails.bind(this, post)}>View Dream</Button>
+                    <Button as={Link} to={`/details/${id}`} variant="primary">
+                        View Dream
+                    </Button>
                 </Card.Body>
             </Card>
         </Fragment>
