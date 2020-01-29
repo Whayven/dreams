@@ -12,7 +12,7 @@ export default class Posts extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/posts')
+        axios.get(`${process.env.SERVER_ADDRESS}`)
             .then(res => {
                 this.setState({ posts: res.data });
             })

@@ -47,7 +47,7 @@ export default class DreamForm extends Component {
             body
         }
 
-        axios.post('http://localhost:5000/posts/add', post)
+        axios.post(`${process.env.SERVER_ADDRESS}/add`, post)
             .then(res => this.setState({
                 title: '',
                 body: '',

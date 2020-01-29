@@ -14,7 +14,7 @@ class Details extends Component {
     }
 
     componentDidMount() {
-        Axios.get(`http://localhost:5000/posts/${this.props.match.params.id}`)
+        Axios.get(`${process.env.SERVER_ADDRESS}/${this.props.match.params.id}`)
             .then(res => {
                 this.setState({
                     title: res.data.title,
