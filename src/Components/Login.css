@@ -1,0 +1,32 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100%;
+}
+
+.login-img {
+    background: url("../Assets/sharon-pittaway-flower.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+#login {
+    width: 100%;
+    padding: 4em;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    box-shadow: 4px 8px 2px gainsboro;
+    margin: 1em;
+    background-color: white;
+}
+
+.login-form {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F8F9FA;
+
+}
