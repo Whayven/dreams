@@ -11,6 +11,7 @@ import Posts from './Components/Posts';
 import DreamForm from './Components/DreamForm';
 import Details from './Components/Details';
 import Login from './Components/Login';
+import Signup from './Components/Signup';
 
 const App = () => {
     return (
@@ -28,6 +29,8 @@ const App = () => {
                 <Route component={Posts} exact path="/posts" />
 
                 <Route component={Login} exact path="/login" />
+
+                <Route component={Signup} exact path="/signup" />
 
             </Switch>
         </Router>

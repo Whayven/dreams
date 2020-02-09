@@ -1,0 +1,18 @@
+.navbar {
+    background-color: white;
+    border-bottom: 1px solid #E5E9EF;
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: white;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url(../Assets/icons8-menu.svg);
+}
+
+.navbar-toggler:focus {
+    outline: 5px auto #E5E9EF;
+}

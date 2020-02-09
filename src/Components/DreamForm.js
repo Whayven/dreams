@@ -2,6 +2,8 @@ import React, { Component, Fragment } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 import axios from 'axios';
 
+import './DreamForm.css';
+
 export default class DreamForm extends Component {
     constructor(props) {
         super(props);
@@ -70,7 +72,7 @@ export default class DreamForm extends Component {
             <div className="container">
                 <br />
                 <this.displayMessage />
-                <Form onSubmit={this.onSubmit}>
+                <Form onSubmit={this.onSubmit} className="dream-form">
                     <Form.Label>
                         <h2>Dream Title</h2>
                     </Form.Label>

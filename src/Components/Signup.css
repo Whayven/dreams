@@ -1,0 +1,20 @@
+.signup {
+    height: 100%;
+}
+
+#signup-form {
+    width: 100%;
+    padding: 4em;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    box-shadow: 4px 8px 2px gainsboro;
+    margin: 1em;
+    background-color: #F8F9FA;
+}
+
+.signup-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

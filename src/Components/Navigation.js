@@ -2,10 +2,12 @@ import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { NavLink, Link } from 'react-router-dom';
 
+import './Navigation.css';
+
 const Navigation = () => {
     return (
         <div>
-            <Navbar bg="light" expand="lg">
+            <Navbar className="navbar" variant="light" expand="lg" fixed="top">
                 <Navbar.Brand as={Link} to="/">Dreams</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
