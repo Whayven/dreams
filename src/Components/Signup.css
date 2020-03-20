@@ -1,5 +1,8 @@
 .signup {
     height: 100%;
+    background-image: url(../Assets/eshan-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
 #signup-form {
@@ -7,7 +10,7 @@
     padding: 4em;
     border: 1px solid lightgray;
     border-radius: 2px;
-    box-shadow: 4px 8px 2px gainsboro;
+    box-shadow: 4px 8px 2px rgb(107, 99, 99);
     margin: 1em;
     background-color: #F8F9FA;
 }
@@ -17,4 +20,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#signupName .form-label {
+    display: block;
+}
+
+#signupName .form-control {
+    width: 45%;
+    display: inline;
 }

@@ -11,6 +11,7 @@ Cargo.lock
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
 
+
 # Dependency directories
 node_modules/
 jspm_packages/
@@ -32,4 +33,5 @@ jspm_packages/
 
 # Parcel related files
 dist/
+prod/
 .cache/

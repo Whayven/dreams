@@ -4,6 +4,10 @@ import { Form, Container, Button } from 'react-bootstrap';
 import './Signup.css'
 
 export default class Signup extends Component {
+    state = {
+
+    }
+
     render() {
         return (
             <div className="signup">
@@ -15,6 +19,12 @@ export default class Signup extends Component {
                             <Form.Text className="text-muted">
                                 We'll never share your email with anyone else.
                             </Form.Text>
+                        </Form.Group>
+
+                        <Form.Group controlId="signupName" id="signupName">
+                            <Form.Label>Full Name</Form.Label>
+                            <Form.Control type="text" placeholder="Enter your name" onChange={this.onNameChange} />
+                            <Form.Control type="text" placeholder="Enter your name" onChange={this.onNameChange} />
                         </Form.Group>
 
                         <Form.Group controlId="signupPass">
@@ -31,8 +41,8 @@ export default class Signup extends Component {
                         <Button variant="primary" type="submit">
                             Sign Up
                         </Button>
-
                     </Form>
+
                 </Container>
             </div>
         )
